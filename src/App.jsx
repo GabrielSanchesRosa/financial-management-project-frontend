@@ -1,17 +1,12 @@
-import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import Sidebar, { Items } from "./components/Sidebar";
+import "./App.css";
 import Dashboard from "./pages/Dashboard";
 
-function App() {
+export default function App() {
   return (
-    <div className="min-h-screen min-w-screen bg-gray-100">
-      <main className="p-4">
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-        </Routes>
-      </main>
-    </div>
+    <main className="flex">
+      <Sidebar>{Items()}</Sidebar>
+      <Dashboard />
+    </main>
   );
 }
-
-export default App;

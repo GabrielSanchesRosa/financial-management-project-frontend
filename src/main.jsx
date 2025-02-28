@@ -3,11 +3,16 @@ import App from "./App";
 import "./index.css";
 import { createRoot } from "react-dom/client";
 import { StrictMode } from "react";
+import Dashboard from "./pages/Dashboard";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "*",
     element: <App />,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
   },
 ]);
 
